@@ -1,36 +1,34 @@
-# Instalando
+# Install
 
-Navegue até a pasta do projeto e instale as dependencias:
+Navigate to your path project, example:
 
-    cd c:\Users\Wallace\Desktop\Projeto
+    cd c:\foo\bar\project
     python -m venv .env
     boot
     pip install -r requirements.txt
 
-# Adicionar novos pacotes (no virtual env)
+# Add new packages (with virtual env)
 
-navegue via cmd ou powershell até a pasta do projeto:
+Navigate using cmd or powershell to project folder:
 
-   cd c:\Users\Wallace\Desktop\Projeto
+    cd c:\foo\bar\project
 
-Então digite (isto inicia o venv):
+Type (will start venv):
 
     boot
 
-E precione enter, ele tem que entrar no VENV, após isto pode trabalhar a adicição de pacotes
+# Testing application
 
-# Testar o script
-
-Basta digitar no cmd (não precisa iniciar o venv, ele inicia sozinho):
+Type in cmd or powershell (no needs type `boot`, `test` autostart venv):
 
     test
 
-E apertar Enter, ou então dar dois cliques no `test.bat` que se localiza na pasta (acaso não esteja usando linha de comando)
+Or use double-click in `test.bat` on folder
 
-# Deploy do programa
+# Simple deploy application (create `.exe`)
 
-No cmd execute digite (não precisa iniciar o venv, ele inicia sozinho):
+Type in cmd or powershell (no needs type `boot`, `test` autostart venv):
 
     deploy
 
-E aperte Enter, ou então dar dois cliques no `deploy.bat` que se localiza na pasta (acaso não esteja usando linha de comando)
+Or use double-click in `deploy.bat` on folder

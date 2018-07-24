@@ -2,11 +2,9 @@ call boot.bat
 
 echo Executando pyinstaller:
 
-pyinstaller main.py
+pyinstaller --windowed main.py
 
 pause
-
-::for /R .env\Lib\site-packages\PyQt5\Qt\bin %%f in (*.dll) do copy %%f dist\main
 
 echo Copiando DLLs extras...
 
