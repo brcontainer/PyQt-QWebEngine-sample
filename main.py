@@ -24,18 +24,18 @@ class Ui_MainWindow(object):
         self.gridLayout = QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName("gridLayout")
 
-        self.webView = QWebEngineView(self.centralwidget)
-        self.webView.setUrl(QUrl("https://github.com/brcontainer/"))
-        self.webView.setObjectName("webView")
+        webView = QWebEngineView(self.centralwidget)
+        webView.setUrl(QUrl("https://github.com/brcontainer/"))
+        webView.setObjectName("webView")
 
-        self.gridLayout.addWidget(self.webView, 0, 0, 1, 1)
+        self.gridLayout.addWidget(webView, 0, 0, 1, 1)
 
         MainWindow.setCentralWidget(self.centralwidget)
 
-        self.statusbar = QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
+        statusbar = QStatusBar(MainWindow)
+        statusbar.setObjectName("statusbar")
 
-        MainWindow.setStatusBar(self.statusbar)
+        MainWindow.setStatusBar(statusbar)
 
         self.retranslateUi(MainWindow)
 
