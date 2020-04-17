@@ -19,15 +19,15 @@ Type (will start venv):
 
 # Testing application
 
-Type in cmd or powershell (no needs type `boot`, `test` autostart venv):
+Type in cmd or powershell (no needs type `boot`, `run` autostart venv):
 
-    test
+    run
 
-Or use double-click in `test.bat` on folder
+Or use double-click in `run.bat` on folder
 
 # Simple deploy application (create `.exe`)
 
-Type in cmd or powershell (no needs type `boot`, `test` autostart venv):
+Type in cmd or powershell (no needs type `boot`, `run` autostart venv):
 
     deploy
 
