@@ -1,19 +1,17 @@
 call boot.bat
 
-echo Executando pyinstaller:
+echo Executing pyinstaller:
 
 pyinstaller --windowed main.py
 
 pause
 
-echo Copiando DLLs extras...
+echo Coping DLLs...
 
-xcopy .env\Lib\site-packages\PyQt5\Qt\bin\*.dll dist\main /sy
+xcopy .env\Lib\site-packages\PyQt5\Qt5\bin\*.dll dist\main /sy
 
 pause
 
-cls
-
-echo O deploy esta na pasta "./dist/main"
+echo Deploy on "./dist/main"
 
 pause
