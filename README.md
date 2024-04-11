@@ -4,9 +4,7 @@ Navigate to your path project, example:
 
 ```
 cd c:\foo\bar\project
-python -m venv .env
-boot
-pip install -r requirements.txt
+install
 ```
 
 # Add new packages (with virtual env)
