@@ -1,24 +1,28 @@
 # -*- coding: utf-8 -*-
 
-from PyQt5.QtWebEngineWidgets import QWebEngineView
+from PyQt6.QtWebEngineWidgets import QWebEngineView
 
-from PyQt5.QtWidgets import QApplication
-from PyQt5.QtWidgets import QMainWindow
-from PyQt5.QtWidgets import QStatusBar
-from PyQt5.QtWidgets import QGridLayout
-from PyQt5.QtWidgets import QWidget
+from PyQt6.QtWidgets import (
+    QApplication,
+    QMainWindow,
+    QStatusBar,
+    QGridLayout,
+    QWidget
+)
 
-from PyQt5.QtCore import QCoreApplication
-from PyQt5.QtCore import QMetaObject
-from PyQt5.QtCore import QUrl
+from PyQt6.QtCore import (
+    QCoreApplication,
+    QMetaObject,
+    QUrl
+)
 
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 600)
+class MainWindow(object):
+    def setupUi(self, main):
+        main.setObjectName("MainWindow")
+        main.resize(800, 600)
 
-        self.centralwidget = QWidget(MainWindow)
+        self.centralwidget = QWidget(main)
         self.centralwidget.setObjectName("centralwidget")
 
         self.gridLayout = QGridLayout(self.centralwidget)
@@ -30,20 +34,20 @@ class Ui_MainWindow(object):
 
         self.gridLayout.addWidget(webView, 0, 0, 1, 1)
 
-        MainWindow.setCentralWidget(self.centralwidget)
+        main.setCentralWidget(self.centralwidget)
 
-        statusbar = QStatusBar(MainWindow)
+        statusbar = QStatusBar(main)
         statusbar.setObjectName("statusbar")
 
-        MainWindow.setStatusBar(statusbar)
+        main.setStatusBar(statusbar)
 
-        self.retranslateUi(MainWindow)
+        self.retranslateUi(main)
 
-        QMetaObject.connectSlotsByName(MainWindow)
+        QMetaObject.connectSlotsByName(main)
 
 
-    def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", "MainWindow"))
+    def retranslateUi(self, main):
+        main.setWindowTitle(QCoreApplication.translate("MainWindow", "MainWindow"))
 
 
 if __name__ == "__main__":
@@ -51,12 +55,11 @@ if __name__ == "__main__":
 
     app = QApplication(sys.argv)
 
-    MainWindow = QMainWindow()
+    win = QMainWindow()
 
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
+    ui = MainWindow()
+    ui.setupUi(win)
 
-    MainWindow.show()
+    win.show()
 
-    sys.exit(app.exec_())
-
+    sys.exit(app.exec())
