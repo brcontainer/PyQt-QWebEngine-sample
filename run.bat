@@ -1,4 +1,4 @@
-echo Executing pyinstaller:
+echo Run browser:
 call .env\scripts\activate.bat && (
     python main.py
 )
